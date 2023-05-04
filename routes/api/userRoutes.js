@@ -1,18 +1,25 @@
 const router = require('express').Router();
 const {
+  getUsers,
+  getUserById,
+  createUser,
+  updateUser,
+  deleteUser,
+  addFriend, 
+  deleteFriend
 } = require('../../controllers/thoughtController.js');
 
-router.route('/').get().post();
+router.route('/').get(getUsers).post(createUser);
 
 router
   .route('/:id')
-  .get()
-  .put()
-  .delete();
+  .get(getUserById)
+  .put(updateUser)
+  .delete(deleteUser);
 
-  router
+router
   .route('/:id/friends/:friendId')
-  .post()
-  .delete();
+  .post(addFriend)
+  .delete(deleteFriend);
 
 module.exports = router;
