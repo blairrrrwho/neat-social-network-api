@@ -43,8 +43,8 @@ Preview:
 
 
 ## Tests
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
-
+Endpoints were tested with Insomnia. 
+If you should find any issues, see above on contibuting guidlines or submit a issue with a detailed explanation on how to recreate the bug.
 
 
 ## Credits
