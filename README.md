@@ -3,19 +3,12 @@
 # Neat Social Network API
 
 ## Description
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? 
-- What problem does it solve?
-- What did you learn?
+This is a social network backend that utilizes MongoDB, Mongoose ORM and Express.js to CRUD and define relationships between collections stored in the mongodb and then served by a Express.js server.
 
 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Deployment](#deployment)
-- [Features](#features)
 - [Technologies](#technologies)
 - [License](#license)
 - [Tests](#tests)
@@ -25,32 +18,19 @@ Provide a short description explaining the what, why, and how of your project. U
 
 
 ## Installation
-No installation required -- this is a web-based application
+To install this app, simply fork the repo, and clone down to your local machine. Then in the CLI at relative dir run 'npm i' to get all dependancies required for sucessfull run of the package. Download MongoDB and MongoDB-Compass. Finally run 'npm run seed' to create database and collection full of seed data.
 
 
 ## Usage (Instructions/How-To Use)
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
-
-
-## Deployment
-Live URL: <a href="deployed link">Deployment Link</a>
-<!-- in the parentheses is just the relative path to the screenshot-->
-![alt text](assets/images/screenshot.png)
-
-
-## Features
-If your project has a lot of features, list them here.
+To use the package run 'npm start' which will sync the db and start the server.
+First ensure that you have ran an npm i to intall all necessary packages. 
 
 
 ## Technologies
-JavaScript, HTML, CSS, Node.js, Express.js, MySQL, Java, C, C#, C++, Python, Other, N/A
+JavaScript, HTML, CSS, Node.js, Express.js, MongoDB, Mongoose
 
 
 ## License
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
 This project is licensed under the MIT license. For more information about this license and what it entails, visit the MIT website <a href="https://opensource.org/licenses/MIT">here</a>
 
 Preview:
@@ -66,17 +46,15 @@ Preview:
 Go the extra mile and write tests for your application. Then provide examples on how to run them here.
 
 
+
 ## Credits
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+<li><strong><a href="https://github.com/alc0ve" target="_blank">Christina Hall</a>:</strong> Full-Stack Developer</li> 
+<li><strong><a href="https://github.com/tlequernaque" target="_blank">Terry Lequernaque</a>:</strong> Full-Stack Developer</li>  
+<li><strong><a href="https://github.com/Micklitodev" target="_blank">Michael Lito</a>:</strong> Full-Stack Developer</li>  
 
 
 ## How to Contribute
-If you created an application or package and would like other developers to contribute to it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
+Fork the repo and clone down to your local machine. Once you have the latest version of the repo, you can add or make changes then submit a pull request for your changes. Please use best practices as well as proper naming conventions and comments depicting what the code segements function is. Finally in the body of your pull request, please explain why these changes you were necissary and if it is a bug what steps can be completed to reproduce this bug. If these guidelines are not met, pull requests will not be reviewed or accepted.
 
 ## Contact / Questions
 If you liked this project and want to see more, feel free to check out my other repos [here](https://github.com/blairrrrwho).  
@@ -86,4 +64,4 @@ For any questions or inquiries, you can reach me at blair10324@gmail.com for fur
 <li><strong><a href="https://github.com/blairrrrwho" target="_blank">Blair Millet</a>:</strong> Full-Stack Developer</li>  
 
 - - - - 
-© 2023 Another Bad Music Review, Inc. All Rights Reserved.
+© 2023 Neat Social Network API, Inc. All Rights Reserved.
