@@ -9,10 +9,8 @@ const {
   deleteFriend
 } = require('../../controllers/thoughtController.js');
 
-// /api/users/
 router.route('/').get(getUsers).post(createUser);
 
-// /api/users/:userId
 router
   .route('/:id')
   .get(getUserById)
