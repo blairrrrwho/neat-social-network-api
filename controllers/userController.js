@@ -84,7 +84,7 @@ module.exports = {
     try {
       const userData = await User.findOneAndDelete(
         { _id: req.params.id });
-        console.log(userData);
+      console.log(userData);
 
       if (!userData) {
         res.status(404).json({ message: "No user found with that ID." })
@@ -99,7 +99,6 @@ module.exports = {
       res.status(500).json(err)
     }
   },
-
 
   // add friend
   async addFriend(req, res) {

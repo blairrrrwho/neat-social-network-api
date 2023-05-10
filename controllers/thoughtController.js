@@ -99,13 +99,12 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
 
-
   // add new reaction to thought
   async addReaction(req, res) {
     try {
       const reactionData = await Thought.findOneAndUpdate(
         { _id: req.params.id },
-        { $addToSet: { reactions:  req.body } },
+        { $addToSet: { reactions: req.body } },
         { new: true }
       );
 
