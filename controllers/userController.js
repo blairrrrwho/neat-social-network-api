@@ -82,19 +82,16 @@ module.exports = {
   // delete user
   async deleteUser(req, res) {
     try {
-      const userData = await User.findOneAndDelete({ _id: req.params.id });
+      const userData = await User.findOneAndDelete(
+        { _id: req.params.id });
+        console.log(userData);
 
       if (!userData) {
         res.status(404).json({ message: "No user found with that ID." })
         return;
       }
 
-      await User.updateMany(
-        { _id: { $in: delUser.friends } },
-        { $pull: { friends: params.id } }
-      );
-
-      await Thought.deleteMany({ username: delUser.username });
+      await Thought.deleteMany({ username: userData.username });
 
       res.status(200).json(userData)
     } catch (err) {
@@ -102,6 +99,7 @@ module.exports = {
       res.status(500).json(err)
     }
   },
+
 
   // add friend
   async addFriend(req, res) {
