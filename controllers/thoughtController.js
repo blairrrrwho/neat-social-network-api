@@ -46,9 +46,9 @@ module.exports = {
       const thoughtData = await Thought.create(req.body)
 
       const userData = await User.findOneAndUpdate(
-        { _id: req.params.userId },
+        { _id: req.body.userId },
         { $push: { thoughts: thoughtData._id } },
-        { new: true }
+        { runValidators: true, new: true }
       );
 
       if (!userData) {
