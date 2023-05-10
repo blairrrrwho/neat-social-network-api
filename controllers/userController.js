@@ -25,7 +25,7 @@ module.exports = {
     try {
       const userData = await User.findOne({ _id: req.params.id })
         .populate({
-          path: "thought",
+          path: "thoughts",
           select: "-__v",
         })
         .populate({
@@ -33,7 +33,6 @@ module.exports = {
           select: "-__v",
         })
         .select("-__v");
-      console.log(specificUser);
 
 
       if (!userData) {

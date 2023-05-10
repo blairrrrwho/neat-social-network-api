@@ -4,12 +4,7 @@ module.exports = {
   // get all thoughts
   async getThoughts(req, res) {
     try {
-      const thoughtData = await Thought.find({})
-        .populate({
-          path: "reaction",
-          select: "-__v",
-        })
-        .select("-__v");
+      const thoughtData = await Thought.find()
 
       res.status(200).json(thoughtData)
     } catch (err) {
@@ -22,10 +17,6 @@ module.exports = {
   async getThoughtById(req, res) {
     try {
       const thoughtData = await Thought.findOne({ _id: req.params.id })
-        .populate({
-          path: "reaction",
-          select: "-__v",
-        })
         .select("-__v");
 
       if (!thoughtData) {
@@ -83,39 +74,53 @@ module.exports = {
   },
 
   // delete thought
-  async deleteThought(req, res) {
-    try {
-      const thoughtData = await User.findOneAndDelete(
-        { _id: req.params.id }
-      );
-      if (!deleteThought) {
-        return res.status(404).json({ message: "please try a diffrent id." });
-      }
-
-      const userData = await User.findOneAndUpdate(
-        { _id: req.params.userId },
-        { $pull: { thoughts: req.thoughtData.thoughtId } },
-        { new: true }
-      );
-
-      if (!userData) {
-        res.status(404).json({ message: "No user found with that ID." })
-        return;
-      }
-
-      res.status(200).json(thoughtData)
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err)
-    }
+  deleteThought(req, res) {
+    Thought.findOneAndDelete({ _id: req.params.thoughtId })
+      .then((dbThoughtData) => {
+        if (!dbThoughtData) {
+          return res.status(404).json({ message: "No thought with this id!" });
+        }
+        res.json(dbThoughtData);
+      })
+      .catch((err) => res.status(500).json(err));
   },
+
+
+
+
+  // async deleteThought(req, res) {
+  //   try {
+  //     const thoughtData = await User.findOneAndDelete(
+  //       { _id: req.params.id }
+  //     );
+  //     if (!thoughtData) {
+  //       return res.status(404).json({ message: "please try a diffrent id." });
+  //     }
+
+  //     const userData = await User.findOneAndUpdate(
+  //       { _id: req.params.userId },
+  //       { $pull: { thoughts: req.thoughtData.thoughtId } },
+  //       { new: true }
+  //     );
+
+  //     if (!userData) {
+  //       res.status(404).json({ message: "No user found with that ID." })
+  //       return;
+  //     }
+
+  //     res.status(200).json(thoughtData)
+  //   } catch (err) {
+  //     console.log(err);
+  //     res.status(500).json(err)
+  //   }
+  // },
 
   // add new reaction to thought
   async addReaction(req, res) {
     try {
-      const reactionData = await User.findOneAndUpdate(
+      const reactionData = await Thought.findOneAndUpdate(
         { _id: req.params.id },
-        { $addToSet: { reactionId: req.params.reactionId } },
+        { $addToSet: { reactions:  req.body } },
         { new: true }
       );
 
@@ -134,9 +139,9 @@ module.exports = {
   // delete reaction
   async deleteReaction(req, res) {
     try {
-      const reactionData = await User.findOneAndUpdate(
+      const reactionData = await Thought.findOneAndUpdate(
         { _id: req.params.id },
-        { $pull: { reactions: { reactionId: req.params.reactionId } } },
+        { $pull: { reactions: { _id: req.params.reactionId } } },
         { new: true }
       );
 

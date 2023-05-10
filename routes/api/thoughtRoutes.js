@@ -13,7 +13,7 @@ const {
 router.route('/').get(getThoughts).post(createThought);
 // http://localhost:3001/api/thoughts/id
 router.route('/:id').get(getThoughtById).put(updateThought).delete(deleteThought);
-router.route('/:thoughtId/reactions').post(addReaction);
-router.route('/:thoughtId/reactions/:reactionId').delete(deleteReaction);
+router.route('/:id/reactions').post(addReaction);
+router.route('/:id/reactions/:reactionId').delete(deleteReaction);
 
 module.exports = router;
