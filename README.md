@@ -7,6 +7,8 @@ This is a social network backend that utilizes MongoDB, Mongoose ORM and Express
 
 
 ## Table of Contents
+- [Demo](#demo)
+- [Screenshot](#screenshot)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies](#technologies)
@@ -15,6 +17,16 @@ This is a social network backend that utilizes MongoDB, Mongoose ORM and Express
 - [Credits](#credits)
 - [Contribution](#how-to-contribute)
 - [Contact / Questions](#contact--questions)
+
+
+## Demo
+Full Demo Video:  
+<li><a href="https://vimeo.com/manage/videos/825662468">Full Demo Video</a>: Vimeo URL</li>
+<li><a href="https://drive.google.com/drive/folders/1Eb_dBh_15HyRabqyi5SqGOk4EZUGCOpU 
+">Full Demo Video</a>: Google Drive</li>
+
+## Screenshot
+![Insomnia Screenshot](/assets/insomnia_screenshot_1.png)
 
 
 ## Installation
