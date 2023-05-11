@@ -21,8 +21,8 @@ This is a social network backend that utilizes MongoDB, Mongoose ORM and Express
 
 ## Demo
 Full Demo Video:  
-<li><a href="https://vimeo.com/manage/videos/825662468">Full Demo Video</a>: Vimeo URL</li>
-<li><a href="https://drive.google.com/file/d/10hdhzplWX25v46IT15Km5_TeSjSv8jqz/view?usp=share_link">Full Demo Video</a>: Google Drive</li>
+<li><a href="https://vimeo.com/825685059">Full Demo Video</a>: Vimeo URL</li>
+<li><a href="https://drive.google.com/file/d/18pfA_InAp-O71X0o2yR1bOqveZ3M8fth/view?usp=sharing">Full Demo Video</a>: Google Drive</li>
 
 
 
