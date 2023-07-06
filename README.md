@@ -3,7 +3,7 @@
 # Neat Social Network API
 
 ## Description
-This is a social network backend that utilizes MongoDB, Mongoose ORM and Express.js to CRUD and define relationships between collections stored in the mongodb and then served by a Express.js server.
+This is a social network backend that utilizes MongoDB, Mongoose ODM and Express.js to CRUD and define relationships between collections stored in the mongodb and then served by a Express.js server.
 
 
 ## Table of Contents
